@@ -1,10 +1,18 @@
-* {
-  padding: 0;
-  margin: 0;
+:root {
+  --color-white: #f3f3f3;
+  --color-darkblue: #1b1b32;
+  --color-green: #37af65;
+  --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
 }
 
 body {
-  text-align: center;
+  font-family: "Poopins", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: var(--color-white);
+  background: var(--color-darkblue);
   background-image: linear-gradient(
       115deg,
       rgba(58, 58, 158, 0.8),
@@ -12,10 +20,90 @@ body {
     ),
     url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
 }
-:root {
-  --color-white: #f3f3f3;
-  --color-darkblue: #1b1b32;
-}
+
 form {
   background: var(--color-darkblue-alpha);
+  padding: 2.5rem 0.625rem;
+  border-radius: 0.25rem;
+}
+@media (min-width: 480px) {
+  form {
+    padding: 2.5rem;
+  }
+}
+input,
+button,
+select,
+textarea {
+  line-height: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+h1 {
+  margin-top: 0;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  font-size: 400;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
+}
+label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
+}
+button {
+  border: none;
+}
+.form-group {
+  margin: 0 auto 1.25rem auto;
+  padding: 0.25rem;
+}
+.input-radio {
+  display: inline-block;
+  min-width: 1rem;
+  max-width: 1rem;
+  margin-right: 0.625rem;
+}
+.form-control {
+  width: 100%;
+  height: 2.375rem;
+  padding: 0.375rem 0.75rem;
+  color: #495057;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  display: block;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+}
+.container {
+  width: 100px;
+  margin: 3.126rem auto 0 auto;
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+.description {
+  font-size: italic;
+  font-weight: 200;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+.input-textarea {
+  min-height: 120px;
+  width: 100px;
+  padding: 0.625em;
+  resize: vertical;
 }
